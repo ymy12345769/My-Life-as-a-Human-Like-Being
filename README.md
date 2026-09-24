@@ -1,86 +1,81 @@
-Life
-====
+# My Life Timeline | 我的人生时间线
 
-This is something that I've wanted to build for a long time. It's a **timeline of important events** in my life, visualized in a way my mind always imagine it. There was something called [**Lifepath.me**](http://dcurt.is/facebook-timelines-and-lifepath-me-4) but now it's gone. How about Facebook timeline? Meh.
+[中文](#中文) · [English](#english)
 
-So, this is it. Have a look at [cheeaun.life](http://cheeaun.life/).
+> 状态 / Status: **Planning / 规划中**
 
-Features
---------
+<a id="中文"></a>
+## 中文
 
-- Super simple
-- No fancy formatting
-- No fancy setup
-- No fancy effects
-- Flexible datetimes because sometimes you don't remember the exact date of an event
+这是从 [cheeaun/life](https://github.com/cheeaun/life) Fork 的人生时间线项目。它使用简单的 Markdown 数据，把人生中的重要事件展示为可浏览的时间线。
 
-How to contribute
------------------
+当前 `master` 分支主要保留上游代码，个人时间线内容仍在规划中。
 
-1. Fork this project.
-2. Write code.
-3. Make pull requests.
+### 主要特点
 
-How to setup your own *Life*
-----------------------------
+- 简单、轻量
+- 使用 Markdown 记录事件
+- 支持年份、月份、日期和时间范围
+- 可通过 GitHub Pages 发布
+- 可调整年份宽度、年龄显示和自定义样式
 
-1. Fork this project.
-2. `git checkout -b gh-pages` (or any branch name you like)
-3. Make a copy of `life.example.md`, rename it to `life.md`.
-4. Add your life events into `life.md`.
-5. Preview it on a local server. Use [`python -m http.server`](https://docs.python.org/3/library/http.server.html) or [`http-server`](https://github.com/nodeapps/http-server).
-6. Commit `life.md` (not in `master` branch).
-7. `git push origin gh-pages -f` and publish to [GitHub Pages](http://pages.github.com/).
-8. Update the website link in your GitHub repo description.
-9. Tell the world about your Life.
-10. Add your Life to the [Lives](https://github.com/cheeaun/life/wiki/Lives) page.
+### 建立自己的时间线
 
-How to upgrade your *Life*
---------------------------
+1. 复制 `life.example.md` 并命名为 `life.md`。
+2. 按日期语法添加事件。
+3. 使用本地 HTTP 服务预览。
+4. 将个性化内容放在单独分支，例如 `gh-pages`。
+5. 通过 GitHub Pages 发布。
 
-1. `git checkout master`
-2. `git remote add cheeaun https://github.com/cheeaun/life.git`
-3. `git fetch cheeaun` and `git merge cheeaun/master` to upgrade to latest Life.
-4. `git checkout gh-pages` and `git merge master` to sync changes back to GitHub Pages.
+### 日期示例
 
-[Learn more](https://help.github.com/articles/fork-a-repo).
+- `2000`：发生在某年
+- `01/2000`：发生在某月
+- `01/01/2000`：发生在某天
+- `2001-2005`：持续一段时间
+- `~2005`：大约发生在某年
+- `2005-~`：从某年持续至今
 
-For those who forked the earlier version of Life, these are the steps that I would recommend (requires some Git-fu):
+### 来源与许可证
 
-1. Backup your `life.md`.
-2. Reset (hard) your fork to this repo's `master` branch.
-3. Clean up your `gh-pages`.
-4. Re-commit your `life.md` there.
-5. Make sure your `master` branch is untouched so that future updates work.
+原项目：[cheeaun/life](https://github.com/cheeaun/life)  
+许可证：[MIT](http://cheeaun.mit-license.org/)
 
-How to configure your *Life*
-----------------------------
+---
 
-1. Make a copy of `config.example.json`, rename it to `config.json`.
-2. Only commit it in `gh-pages` branch.
+<a id="english"></a>
+## English
 
-The configuration:
+This repository is a fork of [cheeaun/life](https://github.com/cheeaun/life), a simple project that turns important life events stored in Markdown into a browsable timeline.
 
-- `customStylesheetURL` - (*string*, default to `null`) Path to a custom stylesheet file, for those who doesn't like the default *theme*.
-- `yearLength` - (*number*, default to `120`) The width of the year grids, in pixels.
-- `hideAge` - (*boolean*, default to `false`) Option to hide age from year axis.
+The `master` branch currently stays close to the upstream project. Personal timeline content is still being planned.
 
-Datetime "syntax"
------------------
+### Highlights
 
-- `2000` - event that happen in that year
-- `01/2000` - event that happen in that month/year
-- `01/01/2000` - event that happen exactly in that day/month/year
-- `2001-2005`, `10/2001-02/03/2005` - event that happen within the two dates
-- `~2005` - event that happen around the time in that year
-- `2005-~` - event that happen from that year and beyond (now).
+- Simple and lightweight
+- Events stored in Markdown
+- Flexible years, months, exact dates, and date ranges
+- Can be published with GitHub Pages
+- Configurable year width, age display, and custom styles
 
-Other people's Lives
---------------------
+### Set up your own timeline
 
-Here's [a compilation of Lives from the people who have forked Life](https://github.com/cheeaun/life/wiki/Lives).
+1. Copy `life.example.md` to `life.md`.
+2. Add events using the supported date syntax.
+3. Preview with a local HTTP server.
+4. Keep personalized content on a separate branch such as `gh-pages`.
+5. Publish it with GitHub Pages.
 
-License
--------
+### Date examples
 
-[MIT](http://cheeaun.mit-license.org/)
+- `2000`: an event in that year
+- `01/2000`: an event in that month
+- `01/01/2000`: an event on an exact date
+- `2001-2005`: an event spanning a date range
+- `~2005`: an approximate year
+- `2005-~`: from that year onward
+
+### Source and license
+
+Upstream project: [cheeaun/life](https://github.com/cheeaun/life)  
+License: [MIT](http://cheeaun.mit-license.org/)
